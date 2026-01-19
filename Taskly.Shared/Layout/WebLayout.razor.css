@@ -1,0 +1,174 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    min-height: 100svh;
+    overflow: hidden;
+    padding: 20px 130px;
+    box-sizing: border-box;
+}
+
+
+
+.main-wrapper > .content-wrapper {
+    flex: 1;
+}
+
+.content-wrapper {
+    /*border: 1px solid green;*/
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+/*@media (max-width: 768px) {
+    .main-wrapper {
+        padding: 12px;
+    }
+}
+*/
+
+/* Extra small phones Samsung Galazy S8+ */
+@media (max-width: 360px) {
+    .main-wrapper {
+        padding: 12px;
+    }
+}
+
+/* Small phones iPhone 14 Pro Max*/
+@media (max-width: 480px) {
+    .main-wrapper {
+        padding: 12px;
+    }
+}
+
+/* Large phones */
+@media (max-width: 600px) {
+    .main-wrapper {
+        padding: 12px;
+    }
+}
+
+/*Tablets*/
+/*Portrait tablets iPad Mini*/
+@media (min-width: 601px) and (max-width: 768px) {
+    .main-wrapper {
+        padding: 12px;
+    }
+}
+
+/* Landscape tablets  iPad Air*/
+@media (min-width: 769px) and (max-width: 992px) {
+    .main-wrapper {
+        padding: 12px;
+    }
+}
+
+/*Laptops & Desktops*/
+/* Small laptops iPad pro */
+@media (min-width: 993px) and (max-width: 1200px) {
+    .main-wrapper {
+        padding: 12px;
+    }
+}
+
+/* Large desktops nest hub max*/
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .main-wrapper {
+        padding: 12px;
+    }
+}
+
+/* Extra large screens my laptop and monitor*/
+@media (min-width: 1441px) {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#blazor-error-ui {
+    color-scheme: light only;
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }

@@ -1,0 +1,51 @@
+﻿@page "/home"
+@using Taskly.Shared.Models
+@using Taskly.Shared.Services
+@inject IFormFactor FormFactor
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app running on <em>@factor</em> using <em>@platform</em>.
+<ul>
+    @foreach (var item in lists)
+    {
+        <li>@item.TaskTitle</li>
+    }
+</ul>
+@if (FormFactor.GetDeviceType() == "android")
+{
+    <p>This is adroid</p>
+}
+else if (FormFactor.GetDeviceType() == "windows")
+{
+    <p>This is windows</p>
+}
+else if (FormFactor.GetDeviceType() == "ios")
+{
+    <p>This is ios</p>
+}
+else if (FormFactor.GetDeviceType() == "maccatalyst")
+{
+    <p>This is maccatalyst</p>
+}
+else
+{
+    <p>This is web</p>
+}
+
+
+@code {
+    private string factor => FormFactor.GetFormFactor();
+    private string platform => FormFactor.GetPlatform();
+    [Inject]
+    public ITasksService TasksService { get; set; }
+    public List<Tasks> lists = new List<Tasks>();
+    protected override async Task OnInitializedAsync()
+    {
+        var test = await TasksService.GetTasksAsync();
+        lists = test.Result;
+    }
+
+}

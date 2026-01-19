@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Taskly.Shared/Taskly.Shared.csproj" />
+  <Project Path="Taskly.Web/Taskly.Web.csproj" />
+  <Project Path="Taskly/Taskly.csproj" />
+</Solution>

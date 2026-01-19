@@ -1,0 +1,50 @@
+.navbar-wrapper {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    /*border: 1px solid red;*/
+    flex-shrink: 0; /* prevents shrinking */
+}
+.logo-wrapper {
+    display: flex;
+}
+img.logo-img {
+    width: 45px;
+    border-radius: 4px;
+}
+.logo-text-wrapper {
+    align-items: center;
+    display: flex;
+    margin-left: 5px;
+    color: black;
+    font-weight: 700;
+    font-size: 23px;
+}
+
+.loginregisterbtn-wrapper {
+    display: flex;
+    margin-left: auto;
+    gap: 7px;
+}
+
+.btn-login-register {
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+    /*width: 100px;*/
+    width: clamp(72px,10vw,100px);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    /* height: 35px;*/
+    height: clamp(30px,3.5vw,35px);
+    /*border-radius: 20px;*/
+    border-radius: 35px;
+    font-weight: 600;
+    font-size: clamp(13px,1.6vw,16px);
+}
+@media (max-width: 600px) {
+    .logo-text-wrapper {
+        display: none;
+    }
+}
