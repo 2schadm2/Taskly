@@ -8,6 +8,8 @@
     --g1: #5b6cff;
     --g2: #7a5cff;
     --g3: #c77dff;
+    --greycolor: #f1f1f1;
+    --fontsize: clamp(13px, 1.6vw, 16px);
 }
 
 html, body {
@@ -28,6 +30,9 @@ html, body {
     color: black;
     font-weight: 600;
 }
+.breadcrumb-previous-page {
+    cursor: pointer;
+}
 .breadcrumb-slash {
     display: flex;
     font-size: 15px;
@@ -36,8 +41,15 @@ html, body {
 }
 .breadcrumb-current-page {
     color: var(--g1);
+    cursor:pointer;
 }
-
+.gradient-text {
+    background: linear-gradient(90deg, rgba(91, 108, 255, 1) 0%, rgba(122, 92, 255, 1) 50%, rgba(199, 125, 255, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
 
 
 /*html, body {
