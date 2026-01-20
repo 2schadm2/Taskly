@@ -1,0 +1,416 @@
+.download-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+    .download-wrapper > .download-content-wrapper {
+        flex: 1;
+    }
+
+.download-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+}
+
+.download-text1 {
+    /*font-size: clamp(23px,7vw,70px);*/
+    font-size: clamp(18px,6vw,65px);
+}
+
+
+
+/*Version*/
+.download-version-otherversion-wrapper {
+    display: flex;
+    width: clamp(275px,91vw, 1030px);
+    margin-top: clamp(30px,9vw,90px);
+    margin-bottom: 25px;
+}
+
+.download-version-wrapper {
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.download-versiontitle-status-wrapper {
+    display: flex;
+    gap: 18px;
+}
+
+.download-versiontitle {
+    font-size: clamp(20px,4vw,40px);
+    font-weight: 700;
+}
+
+.download-version-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status {
+    width: clamp(53px, 7.5vw,75px);
+    color: white;
+    /* font-size:clamp(13px,1.6vw,16px);*/
+    font-size: var(--fontsize);
+    background-color: black;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-versionno-released-wrapper {
+    display: flex;
+    gap: 18px;
+    font-size: clamp(13px,1.6vw,16px);
+    font-weight: 500;
+    margin-top: -6px;
+}
+
+.download-otherversion-wrapper {
+    display: flex;
+    color: black;
+    margin-left: auto;
+    align-items: center;
+}
+
+.otherversion-wrapper {
+    display: flex;
+    background-color: #f1f1f1;
+    padding: clamp(9px,1.5vw,15px);
+    font-size: clamp(15px,1.6vw,16px);
+    border-radius: 35px;
+    font-weight: 700;
+    gap: 5px;
+}
+
+
+
+/*Platform*/
+.download-platform-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.download-platform {
+    display: flex;
+    flex-direction: column;
+    width: clamp(275px,46vw,528px);
+    border-radius: 35px;
+    height: clamp(125px,23.5vw,235px);
+}
+
+.platform-header {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    color: white;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    padding-top: clamp(5px,1.5vw,15px);
+    padding-bottom: clamp(5px,1.5vw,15px);
+    padding-left: clamp(12px,3vw,30px);
+}
+
+.platform-header-icon {
+    font-size: clamp(25px,3.5vw,35px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.platform-header-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.platform-header-text1 {
+    font-size: clamp(18px,2.5vw,25px);
+    font-weight: 600;
+}
+
+.platform-header-text2 {
+    font-size: clamp(12px,1.5vw,15px);
+    margin-top: -6px;
+}
+
+.platform-windows-header {
+    background: linear-gradient(90deg, rgba(91, 108, 255, 1) 0%, rgba(122, 92, 255, 1) 100%);
+}
+
+.platform-android-header {
+    background: linear-gradient(90deg, rgba(122, 92, 255, 1) 0%, rgba(199, 125, 255, 1) 100%);
+}
+
+.platform-body-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgrey;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    padding-left: clamp(12px,2vw,30px);
+    padding-right: clamp(12px,2vw,30px);
+}
+
+.download-platform > .platform-body-wrapper {
+    flex: 1;
+}
+
+.platform-body-content {
+    display: flex;
+    border: 1px solid lightgrey;
+    gap: clamp(1px,1.5vw,15px);
+    font-size: clamp(13px,2vw,20px);
+    color: black;
+    padding: clamp(5px,1.4vw,14px);
+    border-radius: 20px;
+    width: 100%;
+}
+
+
+
+@media (max-width: 600px) {
+    .download-text1{
+        width: 100%;
+    }
+    .download-version-otherversion-wrapper {
+        flex-direction: column;
+        gap: 12px;
+        width:100%;
+    }
+
+
+    .download-otherversion-wrapper {
+        margin-left: initial;
+    }
+
+    .download-platform-wrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+    .download-platform {
+        width: 100%;
+    }
+    .download-content-wrapper {
+        margin-top: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.download-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+    .download-wrapper > .download-content-wrapper {
+        flex: 1;
+    }
+.download-content-wrapper {
+    display: flex;
+    flex-direction: column;*/
+/*justify-content: center;*/
+/*align-items: center;
+}
+.download-text1 {
+    font-size: clamp(53px,7vw,70px);
+}*/
+
+
+
+/*Version*/
+/*.download-version-otherversion-wrapper {
+    display: flex;
+    width: 1030px;
+    margin-top: 90px;
+    margin-bottom: 25px;
+}
+.download-version-wrapper {
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+.download-versiontitle-status-wrapper {
+    display: flex;
+    gap: 18px;
+}
+.download-versiontitle {
+    font-size: 40px;
+    font-weight: 500;
+}
+.download-version-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.status {
+    width: 75px;
+    color: white;
+    background-color: black;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.download-versionno-released-wrapper {
+    display: flex;
+    gap: 18px;
+    font-weight: 500;
+    margin-top: -6px;
+}
+.download-otherversion-wrapper {
+    display: flex;
+    color: black;
+    margin-left: auto;
+    align-items: center;
+}
+.otherversion-wrapper {
+    display: flex;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 35px;
+    font-weight: 700;
+    gap: 5px;
+}*/
+
+
+
+/*Platform*/
+/*.download-platform-wrapper{
+    display:flex;
+    gap:20px;
+}
+.download-platform {
+    display: flex;
+    flex-direction: column;
+    width: 528px;
+    border-radius: 35px;
+    height: 235px;
+}
+.platform-header {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    color: white;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+}
+.platform-header-icon {
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.platform-header-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.platform-header-text1 {
+    font-size: 25px;
+    font-weight: 600;
+}
+.platform-header-text2 {
+    font-size: 15px;
+    margin-top: -6px;
+}
+.platform-windows-header {
+    background: linear-gradient(90deg, rgba(91, 108, 255, 1) 0%, rgba(122, 92, 255, 1) 100%);
+}
+.platform-android-header {
+    background: linear-gradient(90deg, rgba(122, 92, 255, 1) 0%, rgba(199, 125, 255, 1) 100%);
+}
+.platform-body-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgrey;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.download-platform > .platform-body-wrapper {
+    flex: 1;
+}
+.platform-body-content {
+    display: flex;
+    border: 1px solid lightgrey;
+    gap: 15px;
+    font-size: 20px;
+    color: black;
+    padding: 14px;
+    border-radius: 20px;
+    width:100%;
+}*/
