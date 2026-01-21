@@ -1,0 +1,75 @@
+<div class="wrapper-pagi">
+    <div class="pagination-wrapper-main">
+        <div class="pagination-btn-main first-and-prev">
+            <div class="pagination-btn btn-first @(CurrentPage == 1 ? "disabled-pagination-btn" : "")" @onclick="@(() => ChangePage(1))">
+                First
+            </div>
+            <div class="pagination-btn btn-prev @(CurrentPage == 1 ? "disabled-pagination-btn" : "")" @onclick="@(() => ChangePage(CurrentPage - 1))">
+                Prev
+            </div>
+        </div>
+        <div class="pagination-page-wrapper">
+            <div class="page-text1">Page</div>
+            <div class="pagination-page-input-wrapper">
+                <input class="page-input" value="@PageInput"
+                       @onchange="OnPageInputChange"
+                       @key="InputKey" />
+            </div>
+            <div class="page-text2">of @TotalPages</div>
+        </div>
+        <div class="pagination-btn-main next-and-last">
+            <div class="pagination-btn btn-next @(CurrentPage == TotalPages ? "disabled-pagination-btn" : "")" @onclick="@(() => ChangePage(CurrentPage + 1))">
+                Next
+            </div>
+            <div class="pagination-btn btn-last @(CurrentPage == TotalPages ? "disabled-pagination-btn" : "")" @onclick="@(() => ChangePage(TotalPages))">
+                Last
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@code {
+    [Parameter] public int CurrentPage { get; set; } = 1;
+    [Parameter] public int TotalPages { get; set; }
+    [Parameter] public EventCallback<int> OnPageChanged { get; set; }
+
+    private string PageInput = "1";
+    private int InputKey = 0;
+
+    protected override void OnParametersSet()
+    {
+        PageInput = CurrentPage.ToString();
+    }
+
+    private async Task OnPageInputChange(ChangeEventArgs e)
+    {
+        var raw = e.Value?.ToString();
+
+        if (!int.TryParse(raw, out var page))
+            page = 1;
+
+        if (page < 1)
+            page = 1;
+
+        if (page > TotalPages)
+            page = 1;
+
+        PageInput = page.ToString();
+
+        InputKey++;
+
+        if (page != CurrentPage)
+            await OnPageChanged.InvokeAsync(page);
+    }
+    private async Task ChangePage(int pageNumber)
+    {
+        if (pageNumber >= 1 && pageNumber <= TotalPages || pageNumber != CurrentPage)
+        {
+            await OnPageChanged.InvokeAsync(pageNumber);
+        }
+    }
+}

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Taskly.Shared.Pages
 {
-    public partial class WebDownloads
+    public partial class Versions
     {
         [Inject]
         public NavigationManager NavigationManager { get; set; }
@@ -13,9 +13,9 @@ namespace Taskly.Shared.Pages
         {
             NavigationManager.NavigateTo("/");
         }
-        public void GoToVersion()
+        public void GoToDownloads()
         {
-            NavigationManager.NavigateTo("/versions");
+            NavigationManager.NavigateTo("/downloads");
         }
     }
 }
