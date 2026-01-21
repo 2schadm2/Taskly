@@ -1,0 +1,98 @@
+.wrapper-pagi{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* padding: 8px; */
+    box-sizing: border-box;
+}
+.pagination-wrapper-main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(8px, 2vw, 20px);
+    width: max-content;
+    max-width: 100%;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.15);
+    box-sizing: border-box;
+}
+.pagination-btn-main {
+    display: flex;
+}
+.btn-first{
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.btn-prev {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.btn-next {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.btn-last {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.disabled-pagination-btn {
+    background: linear-gradient(135deg, var(--primary-purple-soft), var(--primary-blue-soft)) !important;
+    box-shadow: none;
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.pagination-btn {
+    padding: clamp(8px, 1.2vw, 10px) clamp(14px, 2vw, 18px);
+    background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+    color: var(--text-light);
+    font-weight: 700;
+    font-size: clamp(12px, 1vw, 14px);
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+}
+.pagination-page-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: clamp(12px, 1.1vw, 14px);
+    color: var(--text-dark);
+    white-space: nowrap;
+}
+.page-input {
+    width: clamp(36px, 5vw, 46px);
+    height: clamp(26px, 4vw, 30px);
+    text-align: center;
+    font-size: clamp(12px, 1vw, 14px);
+    border-radius: 6px;
+    border: 1px solid #c7c9ff;
+    outline: none;
+}
+.pagination-btn-main {
+    display: flex;
+}
+@media (max-width: 600px) {
+    .pagination-wrapper-main {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .pagination-btn-main {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .pagination-btn {
+        flex: 1;
+        text-align: center;
+    }
+    .pagination-page-wrapper {
+        order: -1;
+    }
+}

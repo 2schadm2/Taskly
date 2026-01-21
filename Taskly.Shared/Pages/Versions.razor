@@ -1,0 +1,49 @@
+@page "/versions"
+@layout WebLayout
+<div class="version-wrapper">
+    <div class="breadcrumb-wrapper">
+        <div class="breadcrumb-previous-page" @onclick="GoToHome">Home</div>
+        <div class="breadcrumb-slash">/</div>
+        <div class="breadcrumb-previous-page" @onclick="GoToDownloads">Downloads</div>
+        <div class="breadcrumb-slash">/</div>
+        <div class="breadcrumb-current-page">Versions</div>
+    </div>
+    <div class="version-text1 gradient-text">Choose your version</div>
+    <div class="table-scroll">
+        <div class="div-table">
+            <div class="div-row div-header">
+                <div class="div-cell">Taskly Version</div>
+                <div class="div-cell">Latest Release</div>
+                <div class="div-cell">Latest Relesase Date</div>
+            </div>
+            <div class="div-row">
+                <div class="div-cell">Taskly 7</div>
+                <div class="div-cell">1.0.2</div>
+                <div class="div-cell">Jan 14, 2026</div>
+            </div>
+            <div class="div-row">
+                <div class="div-cell">Taskly 6</div>
+                <div class="div-cell">1.11.2</div>
+                <div class="div-cell">Nov 27, 2025</div>
+            </div>
+            <div class="div-row">
+                <div class="div-cell">Taskly 5</div>
+                <div class="div-cell">1.1.7</div>
+                <div class="div-cell">Feb 02, 2024</div>
+            </div>
+            <div class="div-row">
+                <div class="div-cell">Taskly 4</div>
+                <div class="div-cell">1.2.2</div>
+                <div class="div-cell">July 12, 2023</div>
+            </div>
+            <div class="div-row">
+                <div class="div-cell">Taskly 3</div>
+                <div class="div-cell">1.9.2</div>
+                <div class="div-cell">March 08, 2022</div>
+            </div>
+        </div>
+    </div>
+    <div class="pagi-wrapper">
+        <Pagination CurrentPage="1" TotalPages="22" />
+    </div>
+</div>
