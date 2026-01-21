@@ -16,27 +16,33 @@
                 <div class="div-cell">Latest Release</div>
                 <div class="div-cell">Latest Relesase Date</div>
             </div>
-            <div class="div-row">
-                <div class="div-cell">Taskly 7</div>
+            <div class="div-row taskly-version-row" @onclick="() => GoToVersionDownload(7)">
+                <div class="div-cell">
+                    @* Taskly 7  *@
+                    <span class="version-wrap">
+                        Taskly 7
+                        <span class="current-status">Current</span>
+                    </span>
+                </div>
                 <div class="div-cell">1.0.2</div>
                 <div class="div-cell">Jan 14, 2026</div>
             </div>
-            <div class="div-row">
+            <div class="div-row taskly-version-row" @onclick="() => GoToVersionDownload(6)">
                 <div class="div-cell">Taskly 6</div>
                 <div class="div-cell">1.11.2</div>
                 <div class="div-cell">Nov 27, 2025</div>
             </div>
-            <div class="div-row">
+            <div class="div-row taskly-version-row" @onclick="() => GoToVersionDownload(5)">
                 <div class="div-cell">Taskly 5</div>
                 <div class="div-cell">1.1.7</div>
                 <div class="div-cell">Feb 02, 2024</div>
             </div>
-            <div class="div-row">
-                <div class="div-cell">Taskly 4</div>
+            <div class="div-row taskly-version-row" @onclick="() => GoToVersionDownload(4)">
+                <div class="div-cell ">Taskly 4</div>
                 <div class="div-cell">1.2.2</div>
                 <div class="div-cell">July 12, 2023</div>
             </div>
-            <div class="div-row">
+            <div class="div-row taskly-version-row" @onclick="() => GoToVersionDownload(3)">
                 <div class="div-cell">Taskly 3</div>
                 <div class="div-cell">1.9.2</div>
                 <div class="div-cell">March 08, 2022</div>

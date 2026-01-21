@@ -5,10 +5,12 @@ using System.Text;
 
 namespace Taskly.Shared.Pages
 {
-    public partial class Versions
+    public partial class VersionDownload
     {
         [Inject]
         public NavigationManager NavigationManager { get; set; }
+        [Parameter]
+        public string version { get; set; }
         public void GoToHome()
         {
             NavigationManager.NavigateTo("/");
@@ -17,9 +19,9 @@ namespace Taskly.Shared.Pages
         {
             NavigationManager.NavigateTo("/downloads");
         }
-        public void GoToVersionDownload(int versionNo)
+        public void GoToVersions()
         {
-            NavigationManager.NavigateTo($"/taskly/{versionNo}");
+            NavigationManager.NavigateTo("/versions");
         }
     }
 }

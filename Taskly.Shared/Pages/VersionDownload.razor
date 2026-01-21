@@ -1,0 +1,141 @@
+@page "/taskly/{version}"
+@layout WebLayout
+<div class="tasklydownload-wrapper">
+    <div class="breadcrumb-wrapper">
+        <div class="breadcrumb-previous-page" @onclick="GoToHome">Home</div>
+        <div class="breadcrumb-slash">/</div>
+        <div class="breadcrumb-previous-page" @onclick="GoToDownloads">Downloads</div>
+        <div class="breadcrumb-slash">/</div>
+        <div class="breadcrumb-previous-page" @onclick="GoToVersions">Versions</div>
+        <div class="breadcrumb-slash">/</div>
+        <div class="breadcrumb-current-page">@($"Taskly {version}")</div>
+    </div>
+    <div class="version-text1 gradient-text">Download Taskly @version</div>
+    <div class="table-scroll">
+        <div class="div-table">
+            <div class="div-row div-header">
+                <div class="div-cell">Version</div>
+                <div class="div-cell">Release Date</div>
+                <div class="div-cell">Download For</div>
+            </div>
+            <div class="div-row taskly-version-row">
+                <div class="div-cell">
+                    <span class="version-wrap">
+                        @($"{version}.0.5")
+                        <span class="current-status">Latest release</span>
+                    </span>
+                </div>
+                <div class="div-cell">Jan 14, 2026</div>
+                <div class="div-cell">
+                    <div class="download-app download-windows">
+                        <div class="download-app-icon">
+                            <i class="fa-brands fa-windows"></i>
+                        </div>
+                        <div class="download-app-text">
+                            Windows
+                        </div>
+                    </div>
+                    <div class="download-app download-android">
+                        <div class="download-app-icon">
+                            <i class="fa-brands fa-android"></i>
+                        </div>
+                        <div class="download-app-text">
+                            Android
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="div-row taskly-version-row">
+                <div class="div-cell">@($"{version}.0.4")</div>
+                <div class="div-cell">Dec 14, 2025</div>
+                <div class="div-cell">
+                    <div class="download-app download-windows">
+                        <div class="download-app-icon">
+                            <i class="fa-brands fa-windows"></i>
+                        </div>
+                        <div class="download-app-text">
+                            Windows
+                        </div>
+                    </div>
+                    <div class="download-app download-android">
+                        <div class="download-app-icon">
+                            <i class="fa-brands fa-android"></i>
+                        </div>
+                        <div class="download-app-text">
+                            Android
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="div-row taskly-version-row">
+                <div class="div-cell">@($"{version}.0.3")</div>
+                <div class="div-cell">Nov 14, 2025</div>
+                <div class="div-cell">
+                    <div class="download-app download-windows">
+                        <div class="download-app-icon">
+                            <i class="fa-brands fa-windows"></i>
+                        </div>
+                        <div class="download-app-text">
+                            Windows
+                        </div>
+                    </div>
+                    <div class="download-app download-android">
+                        <div class="download-app-icon">
+                            <i class="fa-brands fa-android"></i>
+                        </div>
+                        <div class="download-app-text">
+                            Android
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="div-row taskly-version-row">
+                <div class="div-cell">@($"{version}.0.2")</div>
+                <div class="div-cell">Oct 14, 2025</div>
+                <div class="div-cell">
+                    <div class="download-app download-windows">
+                        <div class="download-app-icon">
+                            <i class="fa-brands fa-windows"></i>
+                        </div>
+                        <div class="download-app-text">
+                            Windows
+                        </div>
+                    </div>
+                    <div class="download-app download-android">
+                        <div class="download-app-icon">
+                            <i class="fa-brands fa-android"></i>
+                        </div>
+                        <div class="download-app-text">
+                            Android
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="div-row taskly-version-row">
+                <div class="div-cell">@($"{version}.0.1")</div>
+                <div class="div-cell">Sep 14, 2025</div>
+                <div class="div-cell">
+                    <div class="download-app download-windows">
+                        <div class="download-app-icon">
+                            <i class="fa-brands fa-windows"></i>
+                        </div>
+                        <div class="download-app-text">
+                            Windows
+                        </div>
+                    </div>
+                    <div class="download-app download-android">
+                        <div class="download-app-icon">
+                            <i class="fa-brands fa-android"></i>
+                        </div>
+                        <div class="download-app-text">
+                            Android
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pagi-wrapper">
+        <Pagination CurrentPage="1" TotalPages="22" />
+    </div>
+</div>
