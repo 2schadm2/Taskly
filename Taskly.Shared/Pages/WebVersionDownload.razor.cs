@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Taskly.Shared.Pages
 {
-    public partial class VersionDownload
+    public partial class WebVersionDownload
     {
         [Inject]
         public NavigationManager NavigationManager { get; set; }
