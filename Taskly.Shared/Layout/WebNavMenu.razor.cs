@@ -13,5 +13,13 @@ namespace Taskly.Shared.Layout
         {
             NavigationManager.NavigateTo("/");
         }
+        public void GoToLogin()
+        {
+            NavigationManager.NavigateTo("/login");
+        }
+        public void GoToRegister()
+        {
+            NavigationManager.NavigateTo("/register");
+        }
     }
 }
